@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDash - Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cart⭐️.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <div class="brand-nav">
+            <!-- <i class="fas fa-hamburger"></i> FoodDash -->
+            <div class="logo">
+            <span class="logo-icon">🍔</span>
+            <span class="logo-text">Food Dash</span>
+      </div>
+        </div>
+        <nav class="nav-links">
+            <a href="home⭐️.html">Home</a>
+            <a href="menu⭐️.html" class="active">Menu</a>
+            <a href="contact⭐️.html">Contact</a>
+        
+        </nav>
+        <div class="location-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <span id="user-location-text">Ezbat saad-Alexandria</span>
+            
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container cart-container">
+        <div class="cart-wrapper">
+            <!-- Cart Items Section -->
+            <div class="cart-items">
+                <div class="header-text">
+                    <h1>Your Cart</h1>
+                    <p>Review and manage your items before checkout.</p>
+                </div>
+
+                <div id="cart-items-list" class="items-list">
+                    <div class="item-controls">
+                        <button class="btn-quantity" onclick="decreaseQuantity(this)">-</button>
+                        <input type="text" class="quantity-input" value="1">
+                        <button class="btn-quantity" onclick="increaseQuantity(this)">+</button>
+                    </div>
+
+
+                        <div class="item-total">
+                            <p class="total-price"></p>
+                        </div>
+                        <button class="btn-remove" onclick="removeItem(this)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    
+                </div>
+
+                <div id="empty-cart-message" class="empty-cart" style="display: none;">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <a href="menu⭐️.html" class="btn-continue-shopping">Continue Shopping</a>
+                </div>
+
+            </div>
+
+            <!-- Order Summary Section -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal"></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span id="delivery-fee">25 EGP</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%)</span>
+                        <span id="tax">7 EGP</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total-amount">$38.47</span>
+                    </div>
+                </div>
+
+                <input type="text" id="promo-code" class="promo-input" placeholder="Enter promo code">
+                <button class="apply-promo" onclick="applyPromo()">Apply Promo</button>
+
+                <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+                <a href="menu⭐️.html" class="continue-shopping-link">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart⭐️.js"></script>
+</body>
+</html>

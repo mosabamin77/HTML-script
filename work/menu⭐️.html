@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDash | Menu</title>
+    <link rel="stylesheet" href="style⭐️.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- BAR2 -->
+    
+    <!-- Navbar -->
+    <div class="navbar">
+      
+      <div class="logo">
+            <span class="logo-icon">🍔</span>
+            <span class="logo-text">Food Dash</span>
+      </div>
+
+      <div class="nav-links">
+            <a href="Cart⭐️.html">Cart</a>
+            <a href="login⭐️.html"><i class="fas fa-user"></i></a>
+            <a href="home⭐️.html">Home</a>
+            <a href="menu⭐️.html" class="active">Menu</a>
+      </div>
+    </div>
+
+<button id="view-cart-btn" class="view-cart-btn">View Cart <span id="cart-count">0</span></button>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-content">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <button id="close-cart">Close</button>
+  </div>
+</div>
+
+    <!-- Menu Section -->
+<section class="menu" id="menu">
+  <div class="section-header">
+    <h2>OUR MENU</h2>
+    <p>Pick your favorite fast-food combo and enjoy the dash 👌</p>
+    <div class="bar2">
+        <a href="#B">Burgers</a>
+        <a href="#S">Sides</a>
+        <a href="#P">Pizza</a>
+        <a href="#DE">Desserts</a>
+        <a href="#DR">Drinks</a>
+    </div>
+  </div>
+
+  <!-- BURGERS -->
+  <h2 class="menu-category">Burgers</h2>
+  <section id="B" class = "BURGERS">
+    <div class="menu-grid">
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/88/e8/b2/88e8b24063ad62d5cb54d93aa430a900.jpg" alt="Classic Dash Burger">
+      <h3>Classic Dash Burger</h3>
+      <p>Grilled beef, cheese, tomato, lettuce and secret sauce.</p>
+      <div class="menu-item-footer">
+        <span class="price">120 EGP</span>
+        <button  class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Classic Dash Burger" 
+        data-price="120 EGP" 
+        data-image="https://i.pinimg.com/736x/88/e8/b2/88e8b24063ad62d5cb54d93aa430a900.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/40/e1/01/40e101e22ec80b124ad9d87a0e3e35dc.jpg" alt="Spicy Volcano Burger">
+      <h3>Spicy Volcano Burger</h3>
+      <p>Jalapeños, hot sauce and double cheese for fire lovers.</p>
+      <div class="menu-item-footer">
+        <span class="price">140 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Spicy Volcano Burger" 
+        data-price="140 EGP" 
+        data-image="https://i.pinimg.com/736x/40/e1/01/40e101e22ec80b124ad9d87a0e3e35dc.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/1200x/54/21/64/542164473be68487283e693972e194c1.jpg" alt="BBQ Smoke Burger">
+      <h3>BBQ Smoke Burger</h3>
+      <p>BBQ sauce, caramelized onions and cheddar cheese.</p>
+      <div class="menu-item-footer">
+        <span class="price">150 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="BBQ Smoke Burger" 
+        data-price="150 EGP" 
+        data-image="https://i.pinimg.com/1200x/54/21/64/542164473be68487283e693972e194c1.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/7d/a7/61/7da76196ec76a8fcb7c0d38bc907a54d.jpg" alt="Crunchy Chicken Dash">
+      <h3>Crunchy Chicken Dash</h3>
+      <p>Crispy chicken, mayo, lettuce and toasted bun.</p>
+      <div class="menu-item-footer">
+        <span class="price">115 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Crunchy Chicken Dash" 
+        data-price="115 EGP" 
+        data-image="https://i.pinimg.com/736x/7d/a7/61/7da76196ec76a8fcb7c0d38bc907a54d.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+  <!-- SIDES -->
+  <h2 class="menu-category">Sides</h2>
+  <section id="S" class = "SIDES">
+    <div class="menu-grid">
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/f3/1b/f5/f31bf5d23add73599f3a827e8ac0b792.jpg" alt="Loaded Fries Box">
+      <h3>Loaded Fries Box</h3>
+      <p>Fries with cheese, sauces and jalapeños.</p>
+      <div class="menu-item-footer">
+        <span class="price">80 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Loaded Fries Box" 
+        data-price="80 EGP" 
+        data-image="https://i.pinimg.com/736x/f3/1b/f5/f31bf5d23add73599f3a827e8ac0b792.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/e8/fe/bf/e8febf720617dc63c7a370aa72db4ff4.jpg" alt="onion rings">
+      <h3>Onion Rings</h3>
+      <p>crunchy onion rings with a delicious dipping,</p>
+      <div class="menu-item-footer">
+        <span class="price">60 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Onion Rings" 
+        data-price="60 EGP" 
+        data-image="https://i.pinimg.com/736x/e8/fe/bf/e8febf720617dc63c7a370aa72db4ff4.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+  <!-- PIZZA -->
+  <h2 class="menu-category">Pizza</h2>
+  <section id="P" class = "PIZZA">
+    <div class="menu-grid">
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/af/ce/5b/afce5bc03baee84c15830afcb740a3f7.jpg" alt="pizza pepperoni">
+      <h3>Dash Pizza Pepperoni</h3>
+      <p>a homemade classic pepperoni pizza with its golden crust,</p>
+      <div class="menu-item-footer">
+        <span class="price">160 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Dash Pizza Pepperoni" 
+        data-price="160 EGP" 
+        data-image="https://i.pinimg.com/736x/af/ce/5b/afce5bc03baee84c15830afcb740a3f7.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/1200x/37/25/66/3725663602634119e2df69a5fa9f020e.jpg" alt="pizza margherita">
+      <h3>Dash Pizza Margherita</h3>
+      <p>a homemade classic Margherita pizza with fresh ingredients,</p>
+      <div class="menu-item-footer">
+        <span class="price">180 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Dash Pizza Margherita" 
+        data-price="180 EGP" 
+        data-image="https://i.pinimg.com/1200x/37/25/66/3725663602634119e2df69a5fa9f020e.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/b6/c8/e7/b6c8e79e93cd0dc491b01a2349329ddc.jpg" alt="Meat Lovers Pizza">
+      <h3>Meat Lovers</h3>
+      <p>delicious pizza made only for the meat lovers,</p>
+      <div class="menu-item-footer">
+        <span class="price">230 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Meat Lovers" 
+        data-price="230 EGP" 
+        data-image="https://i.pinimg.com/736x/b6/c8/e7/b6c8e79e93cd0dc491b01a2349329ddc.jpg">
+    Add to Cart
+</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+  <!-- DESSERTS -->
+  <h2 class="menu-category">Desserts</h2>
+  <section id="DE" class = "DESSERTS">
+    <div class="menu-grid">
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/0e/c2/89/0ec289492947872976c5c52215280faa.jpg" alt="Nutella Tiramisu">
+      <h3>Nutella Tiramisu</h3>
+      <p>Creamy mascarpone, espresso-soaked biscuits, and rich Nutella.</p>
+      <div class="menu-item-footer">
+        <span class="price">65 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Nutella Tiramisu" 
+        data-price="65 EGP" 
+        data-image="https://i.pinimg.com/736x/0e/c2/89/0ec289492947872976c5c52215280faa.jpg">
+    Add to Cart
+</button>
+
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/736x/0b/c3/6e/0bc36e180a889b67ec08e33f24dda452.jpg" alt="Nutella Tiramisu">
+      <h3>ABRAR'S Cheesecake</h3>
+      <p>A rich and creamy cheesecake infused with white chocolate and topped with fresh blueberries and blueberry jam.</p>
+      <div class="menu-item-footer">
+        <span class="price">80 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="ABRAR'S Cheesecake" 
+        data-price="80 EGP" 
+        data-image="https://i.pinimg.com/736x/0b/c3/6e/0bc36e180a889b67ec08e33f24dda452.jpg">
+    Add to Cart
+</button>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+  <!-- DRINKS -->
+  <h2 class="menu-category">Drinks</h2>
+  <section id="DR" class = "DRINKS">
+    <div class="menu-grid">
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/1200x/d4/4a/75/d44a755453ff82c65cc47a320f9fdf18.jpg" alt="Soda">
+      <h3>Midnight Dash</h3>
+      <p>cold refreshing soda</p>
+      <div class="menu-item-footer">
+        <span class="price">15 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Midnight Dash" 
+        data-price="15 EGP" 
+        data-image="https://i.pinimg.com/1200x/d4/4a/75/d44a755453ff82c65cc47a320f9fdf18.jpg">
+    Add to Cart
+</button>
+
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <img src="https://i.pinimg.com/1200x/f0/a3/18/f0a318eaad59aa35a9a5965fb03cc456.jpg" alt="berry bang">
+      <h3>Berry Bang</h3>
+      <p>cold refreshing soda</p>
+      <div class="menu-item-footer">
+        <span class="price">15 EGP</span>
+        <button class = "AddToCart" onclick="addToCart(this)" 
+        data-name="Berry Bang" 
+        data-price="15 EGP" 
+        data-image="https://i.pinimg.com/1200x/f0/a3/18/f0a318eaad59aa35a9a5965fb03cc456.jpg">
+    Add to Cart
+</button>
+
+      </div>
+    </article>
+
+    </div>
+  </section>
+</section>
+
+<!-- <script>
+const cart = [];
+const cartModal = document.getElementById("cart-modal");
+const cartItemsList = document.getElementById("cart-items");
+const viewCartBtn = document.getElementById("view-cart-btn");
+
+
+
+// UPDATE CART UI
+function updateCart() {
+    cartItemsList.innerHTML = "";
+    cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ${item.price}`;
+        cartItemsList.appendChild(li);
+    });
+}
+
+// ADD TO CART BUTTON LOGIC
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+        const item = button.closest(".menu-item");
+        const name = item.querySelector("h3").innerText;
+        const price = item.querySelector(".price").innerText;
+
+        cart.push({ name, price });
+        updateCart();
+
+        // Button click bounce
+        button.classList.add("clicked");
+        setTimeout(() => button.classList.remove("clicked"), 200);
+
+        // Hearts animation
+        spawnHearts(button);
+
+        // Shake View Cart button
+        viewCartBtn.classList.add("shake");
+        setTimeout(() => viewCartBtn.classList.remove("shake"), 500);
+    });
+});
+
+// VIEW CART MODAL OPEN
+viewCartBtn.onclick = () => {
+    cartModal.style.display = "flex";
+    cartModal.style.transform = "scale(1.05)";
+    setTimeout(() => {
+        cartModal.style.transform = "scale(1)";
+    }, 150);
+};
+
+// CLOSE CART MODAL
+document.getElementById("close-cart").onclick = () => {
+    cartModal.style.display = "none";
+};
+
+// CLOSE WHEN CLICKING OUTSIDE
+window.onclick = (e) => {
+    if (e.target === cartModal) {
+        cartModal.style.display = "none";
+    }
+};
+</script> -->
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateMiniCart() {
+    const cartItemsList = document.getElementById("cart-items");
+    cartItemsList.innerHTML = "";
+
+    cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ${item.price}`;
+        cartItemsList.appendChild(li);
+    });
+}
+
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+        const item = button.closest(".menu-item");
+
+        const name = item.querySelector("h3").innerText;
+        const price = item.querySelector(".price").innerText;
+        const img = item.querySelector("img").src;
+
+        cart.push({ name, price, img, quantity: 1 });
+        saveCart();
+        updateMiniCart();
+
+        button.classList.add("clicked");
+        setTimeout(() => button.classList.remove("clicked"), 200);
+
+        spawnHearts(button);
+    });
+});
+
+// CART MODAL (optional)
+const viewCartBtn = document.getElementById("view-cart-btn");
+const cartModal = document.getElementById("cart-modal");
+
+document.getElementById("view-cart-btn").onclick = () => {
+    window.location.href = "Cart⭐️.html";
+};
+
+
+document.getElementById("close-cart").onclick = () => {
+    cartModal.style.display = "none";
+};
+
+window.onclick = (e) => {
+    if (e.target === cartModal) cartModal.style.display = "none";
+};
+// function addToCart(btn) {
+//     const item = {
+//         name: btn.dataset.name,
+//         price: parseFloat(btn.dataset.price),
+//         image: btn.dataset.image,
+//         quantity: 1
+//     };
+
+//     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//     cart.push(item);
+//     localStorage.setItem("cart", JSON.stringify(cart));
+// }
+//////////////////////////////////////////////////
+function addToCart(btn) {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    const image = btn.dataset.image;
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if item exists in cart
+    let existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            name,
+            price,
+            image,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Change button to quantity controls
+    btn.outerHTML = `
+        <div class="qty-controls">
+            <button class="qty-btn" onclick="decreaseQuantity(this, '${name}')">-</button>
+            <span class="qty-number">1</span>
+            <button class="qty-btn" onclick="increaseQuantity(this, '${name}')">+</button>
+        </div>
+    `;
+    updateCartButton();
+}
+function increaseQuantity(btn, name) {
+    let number = btn.previousElementSibling;
+    let value = parseInt(number.textContent);
+
+    number.textContent = value + 1;
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let item = cart.find(i => i.name === name);
+    item.quantity += 1;
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartButton();
+}
+
+
+function decreaseQuantity(btn, name) {
+    let number = btn.nextElementSibling;
+    let value = parseInt(number.textContent);
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let item = cart.find(i => i.name === name);
+
+    if (value > 1) {
+        number.textContent = value - 1;
+        item.quantity -= 1;
+        localStorage.setItem("cart", JSON.stringify(cart));
+    } else {
+        // Remove item from cart
+        cart = cart.filter(i => i.name !== name);
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Return button
+        // btn.parentElement.outerHTML = `
+        //     <button class="AddToCart" 
+        //             onclick="addToCart(this)" 
+        //             data-name="${name}" 
+        //             data-price="${item.price}" 
+        //             data-image="${item.image}">
+        //         Add to Cart
+        //     </button>
+        // `;
+        btn.parentElement.outerHTML = `
+    <button class="AddToCart" 
+            onclick="addToCart(this)" 
+            data-name="${name}" 
+            data-price="${item.price} EGP" 
+            data-image="${item.image}">
+        Add to Cart
+    </button>
+`;
+    }
+    updateCartButton();
+}
+// -----------------------------------------
+// Restore "Add to Cart" buttons after reload
+// -----------------------------------------
+function restoreOldButtonsOnLoad() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.forEach(item => {
+        // ابحث عن زر العنصر بحسب الاسم داخل المنيو
+        let btn = document.querySelector(`.AddToCart[data-name="${item.name}"]`);
+
+        if (btn) {
+            btn.outerHTML = `
+                <div class="qty-controls">
+                    <button class="qty-btn" onclick="decreaseQuantity(this, '${item.name}')">-</button>
+                    <span class="qty-number">${item.quantity}</span>
+                    <button class="qty-btn" onclick="increaseQuantity(this, '${item.name}')">+</button>
+                </div>
+            `;
+        }
+    });
+}
+
+window.addEventListener("DOMContentLoaded", restoreOldButtonsOnLoad);
+
+window.addEventListener("scroll", function() {
+    const bar = document.querySelector(".bar2");
+    const barTop = bar.offsetTop;  
+    const navHeight = document.querySelector(".navbar").offsetHeight;
+
+    if (window.scrollY > barTop - navHeight) {
+        bar.classList.add("sticky");
+    } else {
+        bar.classList.remove("sticky");
+    }
+});
+function updateCartButton() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    const countSpan = document.getElementById("cart-count");
+
+    if (totalQty === 0) {
+        countSpan.style.display = "none";   
+    } else {
+        countSpan.style.display = "inline-block";  
+        countSpan.textContent = totalQty;
+
+        
+        countSpan.classList.add("pulse");
+        setTimeout(() => countSpan.classList.remove("pulse"), 300);
+    }
+}
+document.addEventListener("DOMContentLoaded", () => {
+    updateCartButton();   
+});
+</script>
+</body>
+</html>

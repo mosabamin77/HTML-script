@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Food Dash - Fast Food Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style⭐️.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🍔</span>
+            <span class="logo-text">Food Dash</span>
+        </div>
+        <nav class="nav-links">
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="home⭐️.html">Home</a>
+            <a href="menu⭐️.html" class="active">Menu</a>
+            
+        
+        </nav>
+    </header>
+
+    <!-- Hero / Home + Offers -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Food Dash</h1>
+            <h4 class="hero-subtitle">
+                Super fast. Super tasty.  
+                Burgers beyond your imagination.✨
+            </h4>
+            <div class="hero-buttons">
+                <a href="menu⭐️.html" class="btn primary">Order Now</a>
+                <a href="#offers" class="btn ghost">View Offers</a>
+            </div>
+
+            <!-- Offers inside home page -->
+            <section class="offers" id="offers">
+                <h2>TOP RATES</h2>
+                <div class="offers-grid">
+                    <article class="offer-card">
+                        <h3>AL Sukkari</h3>
+                        <p>The best burger eveeerrr, love it.</p>
+                        <span class="Rate-tag">4⭐️</span>
+                    </article>
+                    <article class="offer-card">
+                        <h3>Abrar</h3>
+                        <p>sooo Yummy</p>
+                        <span class="Rate-tag">5⭐️</span>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Floating burger that moves on scroll -->
+        <div class="hero-visual">
+            <div id="floating-burger" class="floating-burger">
+                <img
+                    src="https://i.pinimg.com/736x/82/61/1b/82611bad3f78b70c8cc62ff2cb6dc18a.jpg"
+                    alt="Food Dash Burger"
+                />
+                <div class="glow-ring"></div>
+                <div class="burger-shadow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="Offer" id="Offer">
+        <div class="section-header">
+            <h2>Today's Hot Offers</h2>
+            <p>Pick your favorite fast-food combo and enjoy the dash.</p>
+        </div>
+        <div class="Offer-grid">
+            <article class="Offer-item">
+              <img
+            src="https://i.pinimg.com/736x/5b/10/cb/5b10cb73653d92d924b174df5cf66dd3.jpg"
+            alt="Dash Duo Burger"
+          />
+                <h3>Dash Duo Burger</h3>
+                <p>If You Are a CR7 Fan YOU Will Get A 70% Off.</p>
+                <span class="off-tag">CR7</span>
+            </article>
+                    <article class="Offer-item">
+                      <img
+                      
+            src="https://i.pinimg.com/736x/14/d9/29/14d9294e4288d7e25eb3cfcf004fbea6.jpg"
+            alt="Dash Duo Burger"
+          />
+                        <h3>Midnight Crunch</h3>
+                        <p>30% off on all orders after 10 PM.</p>
+                        <span class="off-tag">-30%</span>
+                    </article>
+                    <article class="Offer-item">
+                      <img
+            src="https://i.pinimg.com/736x/f1/21/57/f1215734de8069673830a68f0436061a.jpg"
+            alt="Dash Duo Burger"
+          />
+                        <h3>Student Combo</h3>
+                        <p>Burger + fries + drink with a student-friendly price.</p>
+                        <span class="off-tag">Combo</span>
+                    </article>
+                </div>
+            </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Food Dash · Fast Food Experience</p>
+    </footer>
+
+    <script src="script⭐️.js"></script>
+    <script>
+  let currentIndex = 0;
+  const items = document.querySelectorAll(".Offer-item");
+  let autoMotion = true;
+
+  function activateItem(index) {
+    items.forEach((item, i) => {
+      if (i === index) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }
+
+  activateItem(currentIndex);
+
+  // Auto animation every 3 seconds
+  const motionInterval = setInterval(() => {
+    if (autoMotion) {
+      currentIndex = (currentIndex + 1) % items.length;
+      activateItem(currentIndex);
+    }
+  }, 2000);
+
+  // Stop auto motion when mouse enters a card
+  items.forEach((item, index) => {
+    item.addEventListener("mouseenter", () => {
+      autoMotion = false;
+      items.forEach(i => i.classList.remove("active"));
+      item.classList.add("active");
+    });
+
+    // Resume auto motion when mouse leaves
+    item.addEventListener("mouseleave", () => {
+      autoMotion = true;
+    });
+  });
+</script>
+    
+</body>
+</html>

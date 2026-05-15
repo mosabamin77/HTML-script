@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - FoodDash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <div class="top-nav" id="top-nav">
+        <div class="brand-nav"><i class="fas fa-hamburger"></i> FoodDash</div>
+        <div class="location-box"><i class="fas fa-map-marker-alt"></i> <span id="user-location-text"> Izbat Saad, Alexandria, Egypt</span></div>
+    </div>
+
+    <div class="container">
+        <div class="checkout-wrapper">
+            
+            <div class="checkout-details">
+                <h2 style="margin-bottom: 20px;">Delivery Address</h2>
+                <form id="checkoutForm">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="row-inputs">
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="input-group">
+                            <label>City</label>
+                            <input type="text" id="city" value="Cairo" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Address Details</label>
+                        <input type="text" id="address" placeholder="Street, Building, Apartment" required>
+                    </div>
+
+                    <h2 style="margin: 20px 0;">Payment Method</h2>
+                    <input type="hidden" id="selectedPaymentMethod" value="cash">
+
+                    <div class="payment-options">
+                        <div class="payment-card selected" onclick="selectPayment('cash', this)">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <div class="payment-info">
+                                <h4>Cash on Delivery</h4>
+                                <p>Pay when you receive the order</p>
+                            </div>
+                        </div>
+
+                        <div class="payment-card" onclick="selectPayment('card', this)">
+                            <i class="fas fa-credit-card"></i>
+                            <div class="payment-info">
+                                <h4>Credit Card</h4>
+                                <p>Pay securely with your card</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="handlePlaceOrder()" class="submit-btn" id="pay-btn">Place Order</button>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h3 style="margin-bottom: 20px; border-bottom: 2px solid #E87C1E; padding-bottom: 10px;">Order Summary</h3>
+                
+                <div id="cart-items-container">
+                    <p style="text-align: center; color: #777;">Loading cart...</p>
+                </div>
+
+                <div style="margin-top: 20px; border-top: 2px solid #ddd; padding-top: 15px;">
+                    <div class="summary-item" style="font-size: 0.9rem; font-weight: normal;">
+                        <span>Subtotal</span> <span id="subtotal-price">$0.00</span>
+                    </div>
+                    <div class="summary-item" style="font-size: 0.9rem; font-weight: normal;">
+                        <span>Delivery</span> <span id="checkout-delivery">25 EGP</span>
+                        </div>
+                    <div class="summary-item">
+                        <span>Total</span> <span id="total-price" style="color: #E87C1E;">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="success-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; align-items:center; justify-content:center;">
+        <div style="background:white; padding:40px; border-radius:20px; text-align:center; max-width:400px;">
+            <div style="font-size:50px; margin-bottom:20px;">✅</div>
+            <h2>Order Successful!</h2>
+            <p>Your food is on the way.</p>
+            <button onclick="window.location.href='home⭐️.html'" style="margin-top:20px; padding:10px 20px; background:#E87C1E; color:white; border:none; border-radius:5px; cursor:pointer;">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
